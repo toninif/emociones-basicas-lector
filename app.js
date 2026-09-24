@@ -28,13 +28,13 @@ function draw(result) {
   if(!$('points').checked)return;
   if($('point-model').value==='mediapipe'){
     if(!lastMesh)return;
-    ctx.fillStyle='#dbe5eb';
+    ctx.fillStyle='#7df9ff';
     for(const point of lastMesh){ctx.beginPath();ctx.arc(point.x*canvas.width,point.y*canvas.height,1.25,0,Math.PI*2);ctx.fill();}
     return;
   }
   if(!result)return;
   const pts=smoothPoints||result.landmarks.positions;
-  const groups=[[0,16,'#95b5d9',false],[17,21,'#ffd18b',false],[22,26,'#ffd18b',false],[27,30,'#95b5d9',false],[31,35,'#95b5d9',false],[36,41,'#65ded4',true],[42,47,'#65ded4',true],[48,59,'#f5a9c8',true],[60,67,'#f5a9c8',true]];
+  const groups=[[0,16,'#00f0ff',false],[17,21,'#f5ff3b',false],[22,26,'#f5ff3b',false],[27,30,'#00f0ff',false],[31,35,'#00f0ff',false],[36,41,'#39ff88',true],[42,47,'#39ff88',true],[48,59,'#ff2bd6',true],[60,67,'#ff2bd6',true]];
   for(const [start,end,color,closed] of groups){ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=1.3;ctx.beginPath();for(let i=start;i<=end;i++){const p=pts[i];if(i===start)ctx.moveTo(p.x,p.y);else ctx.lineTo(p.x,p.y);}if(closed)ctx.closePath();ctx.stroke();for(let i=start;i<=end;i++){ctx.beginPath();ctx.arc(pts[i].x,pts[i].y,2.8,0,Math.PI*2);ctx.fill();}}
 }
 function display(result){

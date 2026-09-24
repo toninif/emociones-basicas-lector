@@ -46,7 +46,7 @@ function drawMarks(){
   pen.clearRect(0,0,annotationCanvas.width,annotationCanvas.height);
   const scale=annotationCanvas.width/800;
   pen.font=`600 ${18*scale}px "Segoe UI", sans-serif`;pen.lineWidth=3*scale;
-  for(const mark of marks){const x=mark.x*annotationCanvas.width,y=mark.y*annotationCanvas.height;pen.strokeStyle='#ffd18b';pen.beginPath();pen.arc(x,y,16*scale,0,Math.PI*2);pen.stroke();const w=pen.measureText(mark.label).width+16*scale;const tx=Math.max(0,Math.min(x+22*scale,annotationCanvas.width-w));const ty=Math.max(25*scale,Math.min(y,annotationCanvas.height-8*scale));pen.fillStyle='#101e34';pen.fillRect(tx,ty-22*scale,w,30*scale);pen.fillStyle='#ffd18b';pen.fillText(mark.label,tx+8*scale,ty);}
+  for(const mark of marks){const x=mark.x*annotationCanvas.width,y=mark.y*annotationCanvas.height;pen.strokeStyle='#f5ff3b';pen.beginPath();pen.arc(x,y,16*scale,0,Math.PI*2);pen.stroke();const w=pen.measureText(mark.label).width+16*scale;const tx=Math.max(0,Math.min(x+22*scale,annotationCanvas.width-w));const ty=Math.max(25*scale,Math.min(y,annotationCanvas.height-8*scale));pen.fillStyle='#07060d';pen.fillRect(tx,ty-22*scale,w,30*scale);pen.fillStyle='#f5ff3b';pen.fillText(mark.label,tx+8*scale,ty);}
   if(keyboardCursor){const x=cursor.x*annotationCanvas.width,y=cursor.y*annotationCanvas.height;pen.strokeStyle='#fff';pen.beginPath();pen.moveTo(x-10,y);pen.lineTo(x+10,y);pen.moveTo(x,y-10);pen.lineTo(x,y+10);pen.stroke();}
   $('undo-mark').disabled=$('clear-marks').disabled=!marks.length;
 }

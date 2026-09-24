@@ -1,10 +1,10 @@
-# Observación facial
+# Detección facial emocional
 
 Herramienta de demostración para una clase sobre expresiones faciales y Ekman. Muestra el rostro en vivo, puntos de referencia y seis puntuaciones de clasificación: alegría, tristeza, enojo, miedo, asco y sorpresa. El video se analiza en el navegador; la aplicación no lo graba ni lo envía a un servidor.
 
 ## Entrar a la herramienta
 
-**Online:** [Abrir Observación facial](https://fernandotonini.com.ar/emociones-basicas-lector/). Usá Edge o Chrome y permití el acceso a la cámara cuando el navegador lo solicite. Necesitás internet para cargar la página y los modelos; después, el análisis de cada fotograma ocurre en tu dispositivo. La primera vez que elegís MediaPipe se descargan unos 16 MB adicionales. Los archivos pueden quedar en la caché del navegador, pero no conviene depender de ella para una clase sin conexión.
+**Online:** [Abrir Detección facial emocional](https://fernandotonini.com.ar/emociones-basicas-lector/). Usá Edge o Chrome y permití el acceso a la cámara cuando el navegador lo solicite. Necesitás internet para cargar la página y los modelos; después, el análisis de cada fotograma ocurre en tu dispositivo. La primera vez que elegís MediaPipe se descargan unos 16 MB adicionales. Los archivos pueden quedar en la caché del navegador, pero no conviene depender de ella para una clase sin conexión.
 
 **Sin internet:** copiá esta carpeta completa a la computadora que usarás en clase. Con Python 3 instalado, hacé doble clic en `iniciar.cmd`, dejá abierta esa ventana y entrá a <http://localhost:8765> en Edge o Chrome. No abras `index.html` con doble clic: los modelos necesitan servirse desde `localhost`. Esta modalidad incluye todos los archivos, incluido MediaPipe.
 
